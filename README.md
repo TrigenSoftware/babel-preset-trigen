@@ -19,5 +19,7 @@ yarn add -D babel-preset-trigen
 
 Add `babel-preset-trigen` to your presets in `.babelrc`.
 
+Use `babel-preset-trigen/no-runtime` to do not transform runtime.
+
 ---
 [![NPM](https://nodei.co/npm/babel-preset-trigen.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/babel-preset-trigen/)
