@@ -1,0 +1,41 @@
+{
+  "name": "babel-preset-trigen",
+  "version": "1.0.0",
+  "description": "Trigen's Babel preset",
+  "author": "dangreen",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrigenSoftware/babel-preset-trigen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TrigenSoftware/babel-preset-trigen/issues"
+  },
+  "main": "index.js",
+  "keywords": [
+    "babel",
+    "preset",
+    "babel-preset"
+  ],
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-function-sent": "^7.0.0",
+    "@babel/plugin-proposal-json-strings": "^7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "^7.0.0",
+    "@babel/runtime-corejs2": "^7.0.0"
+  },
+  "files": [
+    "index.js",
+    "no-runtime.js"
+  ]
+}
