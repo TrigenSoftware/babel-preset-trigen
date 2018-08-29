@@ -3,10 +3,10 @@ module.exports = (_, options) => {
 	const {
 		commonjs,
 		transformRuntime
-	} = Object.assign({}, options, {
+	} = Object.assign({
 		commonjs:         false,
 		transformRuntime: true
-	});
+	}, options);
 	const presets = [
 		['@babel/preset-env']
 	];
