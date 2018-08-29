@@ -8,7 +8,7 @@ module.exports = (_, options) => {
 		transformRuntime: true
 	}, options);
 	const presets = [
-		['@babel/preset-env']
+		['@babel/preset-env', { useBuiltIns: 'usage' }]
 	];
 	const plugins = [
 		'@babel/plugin-syntax-dynamic-import',
@@ -25,11 +25,11 @@ module.exports = (_, options) => {
 	];
 
 	if (!commonjs) {
-		presets[0].push({ modules: false });
+		presets[0][0].modules = false;
 	}
 
 	if (transformRuntime) {
-		plugins.unshift(['@babel/plugin-transform-runtime', { corejs: 2 }]);
+		plugins.unshift('@babel/plugin-transform-runtime');
 	}
 
 	return {
