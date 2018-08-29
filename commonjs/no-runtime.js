@@ -12,6 +12,7 @@ module.exports = () => ({
 		'@babel/plugin-proposal-export-namespace-from',
 		'@babel/plugin-proposal-numeric-separator',
 		'@babel/plugin-proposal-throw-expressions',
-		'@babel/plugin-proposal-export-default-from'
+		'@babel/plugin-proposal-export-default-from',
+		'@babel/plugin-proposal-async-generator-functions'
 	]
 });
