@@ -5,7 +5,7 @@
 [npm]: https://img.shields.io/npm/v/babel-preset-trigen.svg
 [npm-url]: https://npmjs.com/package/babel-preset-trigen
 
-Trigen's browserslist config.
+Trigen's Babel preset.
 
 # Install
 
