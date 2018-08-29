@@ -21,5 +21,9 @@ Add `babel-preset-trigen` to your presets in `.babelrc`.
 
 Use `babel-preset-trigen/no-runtime` to do not transform runtime.
 
+Use `babel-preset-trigen/commonjs` to transpile ES-modules to CommonJS-modules.
+
+Also exists `babel-preset-trigen/commonjs/no-runtime`.
+
 ---
 [![NPM](https://nodei.co/npm/babel-preset-trigen.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/babel-preset-trigen/)
