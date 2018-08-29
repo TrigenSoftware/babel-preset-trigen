@@ -25,7 +25,7 @@ module.exports = (_, options) => {
 	];
 
 	if (!commonjs) {
-		presets[0][0].modules = false;
+		presets[0][1].modules = false;
 	}
 
 	if (transformRuntime) {
