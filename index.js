@@ -2,10 +2,12 @@ module.exports = (_, options) => {
 
 	const {
 		commonjs,
-		transformRuntime
+		transformRuntime,
+		react
 	} = Object.assign({
 		commonjs:         false,
-		transformRuntime: true
+		transformRuntime: true,
+		react:            false
 	}, options);
 	const presets = [
 		['@babel/preset-env', { useBuiltIns: 'usage' }]
@@ -29,7 +31,11 @@ module.exports = (_, options) => {
 	}
 
 	if (transformRuntime) {
-		plugins.unshift('@babel/plugin-transform-runtime');
+		plugins.push('@babel/plugin-transform-runtime');
+	}
+
+	if (react) {
+		presets.push('@babel/preset-react');
 	}
 
 	return {
