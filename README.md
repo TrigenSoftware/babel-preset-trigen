@@ -21,9 +21,10 @@ Add `babel-preset-trigen` to your presets in `.babelrc`.
 
 ## Options
 
-- `transformRuntime = true`
+- `targets = false`
 - `commonjs = false`
 - `react = false`
+- `transformRuntime = true`
 
 ---
 [![NPM](https://nodei.co/npm/babel-preset-trigen.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/babel-preset-trigen/)

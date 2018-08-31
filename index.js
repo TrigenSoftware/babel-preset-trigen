@@ -1,16 +1,21 @@
 module.exports = (_, options) => {
 
 	const {
+		targets,
 		commonjs,
-		transformRuntime,
-		react
+		react,
+		transformRuntime
 	} = Object.assign({
+		targets:          false,
 		commonjs:         false,
-		transformRuntime: true,
-		react:            false
+		react:            false,
+		transformRuntime: true
 	}, options);
+	const presetEnvOptions = {
+		useBuiltIns: 'usage'
+	};
 	const presets = [
-		['@babel/preset-env', { useBuiltIns: 'usage' }]
+		['@babel/preset-env', presetEnvOptions]
 	];
 	const plugins = [
 		'@babel/plugin-syntax-dynamic-import',
@@ -26,16 +31,20 @@ module.exports = (_, options) => {
 		'@babel/plugin-proposal-async-generator-functions'
 	];
 
-	if (!commonjs) {
-		presets[0][1].modules = false;
+	if (targets) {
+		presetEnvOptions.targets = targets;
 	}
 
-	if (transformRuntime) {
-		plugins.push('@babel/plugin-transform-runtime');
+	if (!commonjs) {
+		presetEnvOptions.modules = false;
 	}
 
 	if (react) {
 		presets.push('@babel/preset-react');
+	}
+
+	if (transformRuntime) {
+		plugins.push('@babel/plugin-transform-runtime');
 	}
 
 	return {
