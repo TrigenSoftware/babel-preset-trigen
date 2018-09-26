@@ -26,5 +26,7 @@ Add `babel-preset-trigen` to your presets in `.babelrc`.
 - `react = false`
 - `transformRuntime = true`
 
+If `NODE_ENV === 'development' && react === true` and `react-hot-loader` is installed - `react-hot-loader/babel` will be added to plugins.
+
 ---
 [![NPM](https://nodei.co/npm/babel-preset-trigen.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/babel-preset-trigen/)

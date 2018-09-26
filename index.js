@@ -41,6 +41,13 @@ module.exports = (_, options) => {
 
 	if (react) {
 		presets.push('@babel/preset-react');
+
+		if (process.env.NODE_ENV === 'development') {
+			try {
+				require.resolve('react-hot-loader/babel');
+				plugins.push('react-hot-loader/babel');
+			} catch (err) {}
+		}
 	}
 
 	if (transformRuntime) {
