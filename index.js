@@ -4,13 +4,21 @@ module.exports = (_, options) => {
 		targets,
 		commonjs,
 		react,
-		transformRuntime
+		transformRuntime,
+		reactConstantElements,
+		reactRemovePropTypes: inputReactRemovePropTypes
 	} = Object.assign({
-		targets:          false,
-		commonjs:         false,
-		react:            false,
-		transformRuntime: true
+		targets:               false,
+		commonjs:              false,
+		react:                 false,
+		transformRuntime:      true,
+		reactConstantElements: {},
+		reactRemovePropTypes:  {}
 	}, options);
+	const reactRemovePropTypes = Object.assign({
+		removeImport:    true,
+		ignoreFilenames: ['node_modules']
+	}, inputReactRemovePropTypes);
 	const presetEnvOptions = {
 		useBuiltIns: 'usage'
 	};
@@ -42,11 +50,23 @@ module.exports = (_, options) => {
 	if (react) {
 		presets.push('@babel/preset-react');
 
-		if (process.env.NODE_ENV === 'development') {
-			try {
-				require.resolve('react-hot-loader/babel');
-				plugins.push('react-hot-loader/babel');
-			} catch (err) {}
+		switch (process.env.NODE_ENV) {
+
+			case 'production':
+				plugins.push(
+					['@babel/plugin-transform-react-constant-elements', reactConstantElements],
+					['babel-plugin-transform-react-remove-prop-types', reactRemovePropTypes],
+					'babel-plugin-transform-react-class-to-function'
+				);
+				break;
+
+			case 'development':
+			default:
+				try {
+					require.resolve('react-hot-loader/babel');
+					plugins.push('react-hot-loader/babel');
+				} catch (err) {}
+				break;
 		}
 	}
 
