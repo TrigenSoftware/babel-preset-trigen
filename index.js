@@ -16,7 +16,7 @@ module.exports = (_, options) => {
 		reactRemovePropTypes:  {}
 	}, options);
 	const reactRemovePropTypes = Object.assign({
-		removeImport:    true,
+		removeImport:    typeof inputReactRemovePropTypes.mode === 'undefined',
 		ignoreFilenames: ['node_modules']
 	}, inputReactRemovePropTypes);
 	const presetEnvOptions = {
