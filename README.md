@@ -7,7 +7,7 @@
 
 Trigen's Babel preset.
 
-# Install
+## Install
 
 ```bash
 npm i -D babel-preset-trigen
@@ -15,7 +15,7 @@ npm i -D babel-preset-trigen
 yarn add -D babel-preset-trigen
 ```
 
-# Configure
+## Configure
 
 Add `babel-preset-trigen` to your presets in `.babelrc`.
 
