@@ -48,12 +48,16 @@ module.exports = (_, options) => {
 	}
 
 	if (react) {
-		presets.push('@babel/preset-react');
 
 		switch (process.env.NODE_ENV) {
 
 			case 'production':
+				presets.push(['@babel/preset-react', {
+					pragma:     'createElement',
+					pragmaFrag: 'Fragment'
+				}]);
 				plugins.push(
+					'babel-plugin-react-local',
 					['@babel/plugin-transform-react-constant-elements', reactConstantElements],
 					['babel-plugin-transform-react-remove-prop-types', reactRemovePropTypes],
 					'babel-plugin-transform-react-class-to-function'
@@ -62,6 +66,8 @@ module.exports = (_, options) => {
 
 			case 'development':
 			default:
+				presets.push('@babel/preset-react');
+
 				try {
 					require.resolve('react-hot-loader/babel');
 					plugins.push('react-hot-loader/babel');
