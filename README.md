@@ -1,9 +1,13 @@
 # babel-preset-trigen
 
 [![NPM version][npm]][npm-url]
+[![Greenkeeper badge][greenkeeper]][greenkeeper-url]
 
 [npm]: https://img.shields.io/npm/v/babel-preset-trigen.svg
 [npm-url]: https://npmjs.com/package/babel-preset-trigen
+
+[greenkeeper]: https://badges.greenkeeper.io/TrigenSoftware/babel-preset-trigen.svg
+[greenkeeper-url]: https://greenkeeper.io/
 
 Trigen's Babel preset.
 
@@ -33,4 +37,4 @@ If `NODE_ENV === 'development' && react === true` and `react-hot-loader` is inst
 If `NODE_ENV === 'production' && react === true` - `babel-plugin-transform-react-*` will be added to plugins. 
 
 ---
-[![NPM](https://nodei.co/npm/babel-preset-trigen.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/babel-preset-trigen/) [![Greenkeeper badge](https://badges.greenkeeper.io/TrigenSoftware/babel-preset-trigen.svg)](https://greenkeeper.io/)
+[![NPM](https://nodei.co/npm/babel-preset-trigen.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/babel-preset-trigen/)
