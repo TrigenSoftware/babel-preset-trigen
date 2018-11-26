@@ -33,4 +33,4 @@ If `NODE_ENV === 'development' && react === true` and `react-hot-loader` is inst
 If `NODE_ENV === 'production' && react === true` - `babel-plugin-transform-react-*` will be added to plugins. 
 
 ---
-[![NPM](https://nodei.co/npm/babel-preset-trigen.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/babel-preset-trigen/)
+[![NPM](https://nodei.co/npm/babel-preset-trigen.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/babel-preset-trigen/) [![Greenkeeper badge](https://badges.greenkeeper.io/TrigenSoftware/babel-preset-trigen.svg)](https://greenkeeper.io/)
