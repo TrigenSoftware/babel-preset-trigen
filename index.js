@@ -5,7 +5,7 @@ module.exports = (_, options) => {
 		commonjs,
 		typescript,
 		react,
-		transfromDynamicImport,
+		transformDynamicImport,
 		transformRuntime,
 		reactConstantElements,
 		reactRemovePropTypes: inputReactRemovePropTypes
@@ -14,7 +14,7 @@ module.exports = (_, options) => {
 		commonjs:               false,
 		typescript:             false,
 		react:                  false,
-		transfromDynamicImport: false,
+		transformDynamicImport: false,
 		transformRuntime:       true,
 		reactConstantElements:  {},
 		reactRemovePropTypes:   {}
@@ -86,7 +86,7 @@ module.exports = (_, options) => {
 		}
 	}
 
-	if (transfromDynamicImport) {
+	if (transformDynamicImport) {
 		plugins.push('babel-plugin-dynamic-import-node');
 	}
 
