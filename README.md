@@ -27,7 +27,9 @@ Add `babel-preset-trigen` to your presets in `.babelrc`.
 
 - `targets = false`
 - `commonjs = false`
+- `typescript = false`
 - `react = false`
+- `transformDynamicImport = false`
 - `transformRuntime = true`
 - [`reactConstantElements`](https://babeljs.io/docs/en/next/babel-plugin-transform-react-constant-elements.html#options)
 - [`reactRemovePropTypes`](https://github.com/oliviertassinari/babel-plugin-transform-react-remove-prop-types#options)

@@ -3,17 +3,21 @@ module.exports = (_, options) => {
 	const {
 		targets,
 		commonjs,
+		typescript,
 		react,
+		transfromDynamicImport,
 		transformRuntime,
 		reactConstantElements,
 		reactRemovePropTypes: inputReactRemovePropTypes
 	} = Object.assign({
-		targets:               false,
-		commonjs:              false,
-		react:                 false,
-		transformRuntime:      true,
-		reactConstantElements: {},
-		reactRemovePropTypes:  {}
+		targets:                false,
+		commonjs:               false,
+		typescript:             false,
+		react:                  false,
+		transfromDynamicImport: false,
+		transformRuntime:       true,
+		reactConstantElements:  {},
+		reactRemovePropTypes:   {}
 	}, options);
 	const reactRemovePropTypes = Object.assign({
 		removeImport:    typeof inputReactRemovePropTypes.mode === 'undefined',
@@ -47,6 +51,10 @@ module.exports = (_, options) => {
 		presetEnvOptions.modules = false;
 	}
 
+	if (typescript) {
+		presets.push('@babel/preset-typescript');
+	}
+
 	if (react) {
 
 		switch (process.env.NODE_ENV) {
@@ -65,15 +73,21 @@ module.exports = (_, options) => {
 				break;
 
 			case 'development':
-			default:
 				presets.push('@babel/preset-react');
-
 				try {
 					require.resolve('react-hot-loader/babel');
 					plugins.push('react-hot-loader/babel');
 				} catch (err) {}
 				break;
+
+			default:
+				presets.push('@babel/preset-react');
+				break;
 		}
+	}
+
+	if (transfromDynamicImport) {
+		plugins.push('babel-plugin-dynamic-import-node');
 	}
 
 	if (transformRuntime) {
