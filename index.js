@@ -32,9 +32,9 @@ module.exports = (_, options) => {
 	const plugins = [
 		'@babel/plugin-syntax-dynamic-import',
 		'@babel/plugin-syntax-import-meta',
+		['@babel/plugin-proposal-decorators', { legacy: true }],
 		'@babel/plugin-proposal-class-properties',
 		'@babel/plugin-proposal-json-strings',
-		['@babel/plugin-proposal-decorators', { legacy: true }],
 		'@babel/plugin-proposal-function-sent',
 		'@babel/plugin-proposal-export-namespace-from',
 		'@babel/plugin-proposal-numeric-separator',
