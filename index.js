@@ -60,10 +60,7 @@ module.exports = (_, options) => {
 		switch (process.env.NODE_ENV) {
 
 			case 'production':
-				presets.push(['@babel/preset-react', {
-					pragma:     'createElement',
-					pragmaFrag: 'Fragment'
-				}]);
+				presets.push('@babel/preset-react');
 				plugins.push(
 					'babel-plugin-react-local',
 					['@babel/plugin-transform-react-constant-elements', reactConstantElements],
