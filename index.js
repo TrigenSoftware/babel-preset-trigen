@@ -24,7 +24,8 @@ module.exports = (_, options) => {
 		ignoreFilenames: ['node_modules']
 	}, inputReactRemovePropTypes);
 	const presetEnvOptions = {
-		useBuiltIns: 'usage'
+		useBuiltIns: 'usage',
+		corejs:      3
 	};
 	const presets = [
 		['@babel/preset-env', presetEnvOptions]
