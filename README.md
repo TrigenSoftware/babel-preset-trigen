@@ -26,6 +26,7 @@ Add `babel-preset-trigen` to your presets in `.babelrc`.
 ## Options
 
 - `targets = false`
+- `corejs = 3`
 - `commonjs = false`
 - `typescript = false`
 - `react = false`

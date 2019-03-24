@@ -2,6 +2,7 @@ module.exports = (_, options) => {
 
 	const {
 		targets,
+		corejs,
 		commonjs,
 		typescript,
 		react,
@@ -11,6 +12,7 @@ module.exports = (_, options) => {
 		reactRemovePropTypes: inputReactRemovePropTypes
 	} = Object.assign({
 		targets:                false,
+		corejs:                 3,
 		commonjs:               false,
 		typescript:             false,
 		react:                  false,
@@ -25,7 +27,7 @@ module.exports = (_, options) => {
 	}, inputReactRemovePropTypes);
 	const presetEnvOptions = {
 		useBuiltIns: 'usage',
-		corejs:      3
+		corejs
 	};
 	const presets = [
 		['@babel/preset-env', presetEnvOptions]
