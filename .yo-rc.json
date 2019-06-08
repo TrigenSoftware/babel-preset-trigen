@@ -1,0 +1,19 @@
+{
+  "generator-trigen-lib": {
+    "editPackage": true,
+    "pkg": {
+      "name": "babel-preset-trigen",
+      "version": "2.2.1",
+      "description": "Trigen's Babel preset.",
+      "repository": "https://github.com/TrigenSoftware/babel-preset-trigen",
+      "author": "dangreen"
+    },
+    "type": "config",
+    "lang": "js",
+    "rollup": false,
+    "checkSize": false,
+    "jest": false,
+    "coverage": false,
+    "cleanPublish": true
+  }
+}
