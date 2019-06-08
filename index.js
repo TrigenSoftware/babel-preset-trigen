@@ -74,10 +74,14 @@ module.exports = (_, options) => {
 
 			case 'development':
 				presets.push('@babel/preset-react');
+
 				try {
 					require.resolve('react-hot-loader/babel');
 					plugins.push('react-hot-loader/babel');
-				} catch (err) {}
+				} catch (err) {
+					/* Ingore */
+				}
+
 				break;
 
 			default:
