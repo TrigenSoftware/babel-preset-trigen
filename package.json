@@ -48,7 +48,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
     "babel-plugin-dynamic-import-node": "^2.2.0",
-    "babel-plugin-react-local": "^0.5.0",
+    "babel-plugin-react-local": "^0.6.0",
     "babel-plugin-transform-react-class-to-function": "^1.2.2",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24"
   },
