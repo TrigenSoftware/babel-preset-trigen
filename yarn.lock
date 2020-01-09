@@ -121,18 +121,6 @@
     "@babel/helper-replace-supers" "^7.7.4"
     "@babel/helper-split-export-declaration" "^7.7.4"
 
-"@babel/helper-create-class-features-plugin@^7.7.4":
-  version "7.7.4"
-  resolved "https://registry.yarnpkg.com/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.7.4.tgz#fce60939fd50618610942320a8d951b3b639da2d"
-  integrity sha512-l+OnKACG4uiDHQ/aJT8dwpR+LhCJALxL0mJ6nzjB25e5IPwqV1VOsY7ah6UB1DG+VOXAIMtuC54rFJGiHkxjgA==
-  dependencies:
-    "@babel/helper-function-name" "^7.7.4"
-    "@babel/helper-member-expression-to-functions" "^7.7.4"
-    "@babel/helper-optimise-call-expression" "^7.7.4"
-    "@babel/helper-plugin-utils" "^7.0.0"
-    "@babel/helper-replace-supers" "^7.7.4"
-    "@babel/helper-split-export-declaration" "^7.7.4"
-
 "@babel/helper-define-map@^7.4.4":
   version "7.4.4"
   resolved "https://registry.yarnpkg.com/@babel/helper-define-map/-/helper-define-map-7.4.4.tgz#6969d1f570b46bdc900d1eba8e5d59c48ba2c12a"
@@ -530,9 +518,9 @@
     "@babel/helper-plugin-utils" "^7.0.0"
 
 "@babel/plugin-syntax-import-meta@^7.2.0":
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-import-meta/-/plugin-syntax-import-meta-7.2.0.tgz#2333ef4b875553a3bcd1e93f8ebc09f5b9213a40"
-  integrity sha512-Hq6kFSZD7+PHkmBN8bCpHR6J8QEoCuEV/B38AIQscYjgMZkGlXB7cHNFzP5jR4RCh5545yP1ujHdmO7hAgKtBA==
+  version "7.7.4"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-import-meta/-/plugin-syntax-import-meta-7.7.4.tgz#3e9e4630780df5885b801f53c5f68d75e99e5261"
+  integrity sha512-hl6aKgm2IbVB+X9Z2xcKvGObOOS//vbohHPpNvd8iaKA3XQi3Sz/3oOyb3GLes6hY871mkbZQYK7lxriVECRAQ==
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
@@ -2977,11 +2965,6 @@ locate-path@^5.0.0:
     p-locate "^4.1.0"
 
 lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.13:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
-
-lodash@^4.17.13:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
