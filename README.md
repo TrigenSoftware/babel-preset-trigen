@@ -5,7 +5,7 @@
 [![Peer dependencies status][peer-deps]][peer-deps-url]
 [![Dependencies status][deps]][deps-url]
 [![Build status][build]][build-url]
-[![Greenkeeper badge][greenkeeper]][greenkeeper-url]
+[![Dependabot badge][dependabot]][dependabot-url]
 
 [npm]: https://img.shields.io/npm/v/babel-preset-trigen.svg
 [npm-url]: https://npmjs.com/package/babel-preset-trigen
@@ -22,8 +22,8 @@
 [build]: http://img.shields.io/travis/com/TrigenSoftware/babel-preset-trigen.svg
 [build-url]: https://travis-ci.com/TrigenSoftware/babel-preset-trigen
 
-[greenkeeper]: https://badges.greenkeeper.io/TrigenSoftware/babel-preset-trigen.svg
-[greenkeeper-url]: https://greenkeeper.io/
+[dependabot]: https://api.dependabot.com/badges/status?host=github&repo=TrigenSoftware/babel-preset-trigen
+[dependabot-url]: https://dependabot.com/
 
 Trigen's Babel preset.
 

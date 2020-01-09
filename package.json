@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-trigen",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "description": "Trigen's Babel preset.",
   "author": "dangreen",
   "license": "MIT",
@@ -13,7 +13,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=10.0.0"
   },
   "scripts": {
     "lint": "trigen-scripts lint",
