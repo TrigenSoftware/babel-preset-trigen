@@ -53,7 +53,7 @@
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24"
   },
   "devDependencies": {
-    "@trigen/scripts": "2",
+    "@trigen/scripts": "3",
     "@trigen/scripts-plugin-eslint": "2",
     "@trigen/scripts-preset-lib": "2"
   },
