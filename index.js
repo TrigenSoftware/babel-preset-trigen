@@ -96,6 +96,12 @@ module.exports = (_, options) => {
 
 	if (transformRuntime) {
 		plugins.push('@babel/plugin-transform-runtime');
+		plugins.push([
+			'babel-plugin-transform-remove-imports',
+			{
+				test: /^regenerator-runtime\/runtime/
+			}
+		]);
 	}
 
 	return {
