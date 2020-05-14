@@ -24,6 +24,10 @@ DO NOT TOUCH. SAVE IT ON TOP.
 
 -->
 
+## [3.0.0] - 2020-05-15
+### Changed
+- Splitted into `app`, `lib` and `jest` environments.
+
 ## [2.3.1] - 2020-05-13
 ### Fixed
 - [Remove runtime-regenerator import.](https://github.com/babel/babel/issues/10759)

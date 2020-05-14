@@ -1,4 +1,4 @@
-module.exports = (_, options) => {
+module.exports = (envOptions, options) => {
 
 	const {
 		targets,
@@ -17,17 +17,17 @@ module.exports = (_, options) => {
 		typescript:             false,
 		react:                  false,
 		transformDynamicImport: false,
-		transformRuntime:       true,
+		transformRuntime:       false,
 		reactConstantElements:  {},
 		reactRemovePropTypes:   {}
-	}, options);
+	}, envOptions, options);
 	const reactRemovePropTypes = Object.assign({
 		removeImport:    typeof inputReactRemovePropTypes.mode === 'undefined',
 		ignoreFilenames: ['node_modules']
 	}, inputReactRemovePropTypes);
-	const presetEnvOptions = {
-		useBuiltIns: 'usage',
-		corejs
+	const presetEnvOptions = {};
+	const transformRuntimeOptions = {
+		useESModules: !commonjs
 	};
 	const presets = [
 		['@babel/preset-env', presetEnvOptions]
@@ -43,8 +43,17 @@ module.exports = (_, options) => {
 		'@babel/plugin-proposal-numeric-separator',
 		'@babel/plugin-proposal-throw-expressions',
 		'@babel/plugin-proposal-export-default-from',
-		'@babel/plugin-proposal-async-generator-functions'
+		'@babel/plugin-proposal-async-generator-functions',
+		['@babel/plugin-transform-runtime', transformRuntimeOptions]
 	];
+
+	if (transformRuntime) {
+		transformRuntimeOptions.corejs = corejs;
+	} else {
+		presetEnvOptions.useBuiltIns = 'usage';
+		presetEnvOptions.corejs = corejs;
+		transformRuntimeOptions.regenerator = false;
+	}
 
 	if (targets) {
 		presetEnvOptions.targets = targets;
@@ -92,16 +101,6 @@ module.exports = (_, options) => {
 
 	if (transformDynamicImport) {
 		plugins.push('babel-plugin-dynamic-import-node');
-	}
-
-	if (transformRuntime) {
-		plugins.push('@babel/plugin-transform-runtime');
-		plugins.push([
-			'babel-plugin-transform-remove-imports',
-			{
-				test: /^regenerator-runtime\/runtime/
-			}
-		]);
 	}
 
 	return {

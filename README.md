@@ -37,9 +37,15 @@ yarn add -D babel-preset-trigen
 
 ## Configure
 
-Add `babel-preset-trigen` to your presets in `.babelrc`.
+Add `babel-preset-trigen/*` to your presets in `.babelrc`.
+
+- `babel-preset-trigen/app` for frontend app;
+- `babel-preset-trigen/lib` for library package;
+- `babel-preset-trigen/jest` for Jest environment.
 
 ## Options
+
+### Common
 
 - `targets = false`
 - `corejs = 3`
@@ -47,10 +53,21 @@ Add `babel-preset-trigen` to your presets in `.babelrc`.
 - `typescript = false`
 - `react = false`
 - `transformDynamicImport = false`
-- `transformRuntime = true`
+- `transformRuntime = false`
 - [`reactConstantElements`](https://babeljs.io/docs/en/next/babel-plugin-transform-react-constant-elements.html#options)
 - [`reactRemovePropTypes`](https://github.com/oliviertassinari/babel-plugin-transform-react-remove-prop-types#options)
 
 If `NODE_ENV === 'development' && react === true` and `react-hot-loader` is installed - `react-hot-loader/babel` will be added to plugins.
 
-If `NODE_ENV === 'production' && react === true` - `babel-plugin-transform-react-*` will be added to plugins. 
+If `NODE_ENV === 'production' && react === true` - `babel-plugin-transform-react-*` will be added to plugins.
+
+### `lib` environment
+
+- `transformRuntime = true`
+
+### `jest` environment
+
+- `targets = { node: 'current' }`
+- `commonjs = true`
+- `transformDynamicImport = true`
+- `transformRuntime = false`
