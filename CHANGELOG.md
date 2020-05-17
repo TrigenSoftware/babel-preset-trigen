@@ -24,6 +24,10 @@ DO NOT TOUCH. SAVE IT ON TOP.
 
 -->
 
+## [4.0.0] - 2020-05-17
+### Changed
+- Env files merged, `env` option added.
+
 ## [3.0.0] - 2020-05-15
 ### Changed
 - Splitted into `app`, `lib` and `jest` environments.

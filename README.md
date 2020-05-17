@@ -37,16 +37,16 @@ yarn add -D babel-preset-trigen
 
 ## Configure
 
-Add `babel-preset-trigen/*` to your presets in `.babelrc`.
-
-- `babel-preset-trigen/app` for frontend app;
-- `babel-preset-trigen/lib` for library package;
-- `babel-preset-trigen/jest` for Jest environment.
+Add `babel-preset-trigen` to your presets in `.babelrc`.
 
 ## Options
 
 ### Common
 
+- `env`
+    - "app"
+    - "lib"
+    - "jest"
 - `targets = false`
 - `corejs = 3`
 - `commonjs = false`
