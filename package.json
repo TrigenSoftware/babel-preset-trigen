@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-trigen",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Trigen's Babel preset.",
   "author": "dangreen",
   "license": "MIT",
@@ -58,6 +58,9 @@
     "@trigen/scripts-preset-lib": "^5.3.0"
   },
   "files": [
-    "index.js"
+    "plugin.js",
+    "app.js",
+    "lib.js",
+    "jest.js"
   ]
 }
