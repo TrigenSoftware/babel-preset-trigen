@@ -1,4 +1,15 @@
-module.exports = (envOptions, options) => {
+function isCommonJS(api, defaults) {
+
+	const supportsStaticESM = api.caller(
+		({ supportsStaticESM }) => supportsStaticESM
+	);
+
+	return typeof supportsStaticESM === 'undefined'
+		? defaults
+		: !supportsStaticESM;
+}
+
+module.exports = (api, envOptions, options) => {
 
 	const {
 		targets,
@@ -8,21 +19,24 @@ module.exports = (envOptions, options) => {
 		react,
 		transformDynamicImport,
 		transformRuntime,
+		requireContextHook,
 		reactConstantElements,
 		reactRemovePropTypes: inputReactRemovePropTypes
 	} = Object.assign({
 		targets:                false,
 		corejs:                 3,
-		commonjs:               false,
+		commonjs:               isCommonJS(api, false),
 		typescript:             false,
 		react:                  false,
 		transformDynamicImport: false,
 		transformRuntime:       false,
+		requireContextHook:     false,
 		reactConstantElements:  {},
 		reactRemovePropTypes:   {}
 	}, envOptions, options);
 	const reactRemovePropTypes = Object.assign({
-		removeImport:    typeof inputReactRemovePropTypes.mode === 'undefined',
+		removeImport:    typeof inputReactRemovePropTypes.mode === 'undefined'
+			|| inputReactRemovePropTypes.mode === 'remove',
 		ignoreFilenames: ['node_modules']
 	}, inputReactRemovePropTypes);
 	const presetEnvOptions = {};
@@ -101,6 +115,10 @@ module.exports = (envOptions, options) => {
 
 	if (transformDynamicImport) {
 		plugins.push('babel-plugin-dynamic-import-node');
+	}
+
+	if (requireContextHook) {
+		plugins.push('babel-plugin-require-context-hook');
 	}
 
 	return {

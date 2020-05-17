@@ -54,6 +54,7 @@ Add `babel-preset-trigen/*` to your presets in `.babelrc`.
 - `react = false`
 - `transformDynamicImport = false`
 - `transformRuntime = false`
+- `requireContextHook = false`
 - [`reactConstantElements`](https://babeljs.io/docs/en/next/babel-plugin-transform-react-constant-elements.html#options)
 - [`reactRemovePropTypes`](https://github.com/oliviertassinari/babel-plugin-transform-react-remove-prop-types#options)
 
@@ -64,6 +65,7 @@ If `NODE_ENV === 'production' && react === true` - `babel-plugin-transform-react
 ### `lib` environment
 
 - `transformRuntime = true`
+- `reactRemovePropTypes = { mode: 'unsafe-wrap' }`
 
 ### `jest` environment
 
@@ -71,3 +73,4 @@ If `NODE_ENV === 'production' && react === true` - `babel-plugin-transform-react
 - `commonjs = true`
 - `transformDynamicImport = true`
 - `transformRuntime = false`
+- `requireContextHook = true`
