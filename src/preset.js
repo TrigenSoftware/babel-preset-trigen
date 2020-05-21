@@ -69,14 +69,12 @@ module.exports = (api, envOptions, options) => {
 		presetEnvOptions.useBuiltIns = useBuiltIns;
 		presetEnvOptions.corejs = corejs;
 
-		if (useBuiltIns === 'usage') {
-			plugins.push([
-				'babel-plugin-transform-remove-imports',
-				{
-					test: /^regenerator-runtime\/runtime/
-				}
-			]);
-		}
+		plugins.push([
+			'babel-plugin-transform-remove-imports',
+			{
+				test: /^regenerator-runtime\/runtime/
+			}
+		]);
 	}
 
 	if (targets) {
