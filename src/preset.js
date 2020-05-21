@@ -43,7 +43,7 @@ module.exports = (api, envOptions, options) => {
 	}, inputReactRemovePropTypes);
 	const presetEnvOptions = {};
 	const transformRuntimeOptions = {
-		useESModules: !commonjs
+		useESModules: false
 	};
 	const presets = [
 		['@babel/preset-env', presetEnvOptions]
