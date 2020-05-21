@@ -64,15 +64,8 @@ module.exports = (api, envOptions, options) => {
 	if (transformRuntime) {
 		transformRuntimeOptions.corejs = corejs;
 	} else {
-		presetEnvOptions.useBuiltIns = 'usage';
+		presetEnvOptions.useBuiltIns = 'entry';
 		presetEnvOptions.corejs = corejs;
-
-		plugins.push([
-			'babel-plugin-transform-remove-imports',
-			{
-				test: /^regenerator-runtime\/runtime/
-			}
-		]);
 	}
 
 	if (targets) {

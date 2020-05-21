@@ -72,5 +72,5 @@ If `NODE_ENV === 'production' && react === true` - `babel-plugin-transform-react
 - `targets = { node: 'current' }`
 - `commonjs = true`
 - `transformDynamicImport = true`
-- `transformRuntime = false`
+- `transformRuntime = true`
 - `requireContextHook = true`

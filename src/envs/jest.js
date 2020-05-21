@@ -3,6 +3,6 @@ module.exports = {
 	targets:                { node: 'current' },
 	commonjs:               true,
 	transformDynamicImport: true,
-	transformRuntime:       false,
+	transformRuntime:       true,
 	requireContextHook:     true
 };
