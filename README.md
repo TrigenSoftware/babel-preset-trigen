@@ -48,6 +48,7 @@ Add `babel-preset-trigen` to your presets in `.babelrc`.
     - "lib"
     - "jest"
 - `targets = false`
+- `useBuiltIns = 'usage'`
 - `corejs = 3`
 - `commonjs = false`
 - `typescript = false`

@@ -13,6 +13,7 @@ module.exports = (api, envOptions, options) => {
 
 	const {
 		targets,
+		useBuiltIns,
 		corejs,
 		commonjs,
 		typescript,
@@ -24,6 +25,7 @@ module.exports = (api, envOptions, options) => {
 		reactRemovePropTypes: inputReactRemovePropTypes
 	} = Object.assign({
 		targets:                false,
+		useBuiltIns:            'usage',
 		corejs:                 3,
 		commonjs:               isCommonJS(api, false),
 		typescript:             false,
@@ -64,8 +66,17 @@ module.exports = (api, envOptions, options) => {
 	if (transformRuntime) {
 		transformRuntimeOptions.corejs = corejs;
 	} else {
-		presetEnvOptions.useBuiltIns = 'entry';
+		presetEnvOptions.useBuiltIns = useBuiltIns;
 		presetEnvOptions.corejs = corejs;
+
+		if (useBuiltIns === 'usage') {
+			plugins.push([
+				'babel-plugin-transform-remove-imports',
+				{
+					test: /^regenerator-runtime\/runtime/
+				}
+			]);
+		}
 	}
 
 	if (targets) {
