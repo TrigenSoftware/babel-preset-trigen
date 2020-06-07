@@ -41,7 +41,7 @@ Add `babel-preset-trigen` to your presets in `.babelrc`.
 
 ## Options
 
-| Name | Default value for `app` env | `lib` env | `jest` env |
+| Option | Default value for `app` env | `lib` env | `jest` env |
 |------|-----------------------------|-----------|------------|
 | targets | `false` | `false` | `{ node: 'current' }` |
 | useBuiltIns | `'usage'` | — | — |
