@@ -41,37 +41,16 @@ Add `babel-preset-trigen` to your presets in `.babelrc`.
 
 ## Options
 
-### Common
-
-- `env`
-    - "app"
-    - "lib"
-    - "jest"
-- `targets = false`
-- `useBuiltIns = 'usage'`
-- `corejs = 3`
-- `commonjs = false`
-- `typescript = false`
-- `react = false`
-- `transformDynamicImport = false`
-- `transformRuntime = false`
-- `requireContextHook = false`
-- [`reactConstantElements`](https://babeljs.io/docs/en/next/babel-plugin-transform-react-constant-elements.html#options)
-- [`reactRemovePropTypes`](https://github.com/oliviertassinari/babel-plugin-transform-react-remove-prop-types#options)
-
-If `NODE_ENV === 'development' && react === true` and `react-hot-loader` is installed - `react-hot-loader/babel` will be added to plugins.
-
-If `NODE_ENV === 'production' && react === true` - `babel-plugin-transform-react-*` will be added to plugins.
-
-### `lib` environment
-
-- `transformRuntime = true`
-- `reactRemovePropTypes = { mode: 'unsafe-wrap' }`
-
-### `jest` environment
-
-- `targets = { node: 'current' }`
-- `commonjs = true`
-- `transformDynamicImport = true`
-- `transformRuntime = false`
-- `requireContextHook = true`
+| Option | Default value for `app` env | `lib` env | `jest` env |
+|------|-----------------------------|-----------|------------|
+| targets | `false` | `false` | `{ node: 'current' }` |
+| useBuiltIns | `'usage'` | — | — |
+| corejs | `3` | — | — |
+| commonjs | `false` | `false` | `true` |
+| typescript | `false` | — | — |
+| react | `false` | — | — |
+| transformDynamicImport | `false` | `false` | `true` |
+| transformRuntime | `false` | `true` | `false` |
+| requireContextHook | `false` | `false` | `true` |
+| [`reactConstantElements`](https://babeljs.io/docs/en/next/babel-plugin-transform-react-constant-elements.html#options) | — | — | — |
+| [`reactRemovePropTypes`](https://github.com/oliviertassinari/babel-plugin-transform-react-remove-prop-types#options) | — | `{ mode: 'unsafe-wrap' }` | — |
